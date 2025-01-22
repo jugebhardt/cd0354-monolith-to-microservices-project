@@ -8,8 +8,6 @@ on:
        - 'udagram-api-user/**'
        - 'udagram-frontend/**'
        - 'udagram-reverseproxy/**'
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
 
