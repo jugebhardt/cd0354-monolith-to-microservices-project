@@ -3,6 +3,11 @@ name: CICD
 on:
   push:
     branches: [ "main" ]
+    paths: 
+       - 'udagram-api-feed/**'
+       - 'udagram-api-user/**'
+       - 'udagram-frontend/**'
+       - 'udagram-reverseproxy/**'
   pull_request:
     branches: [ "main" ]
 
