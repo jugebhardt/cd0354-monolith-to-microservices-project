@@ -12,7 +12,6 @@ import {config} from 'bluebird';
 
 const router: Router = Router();
 
-
 async function generatePassword(plainTextPassword: string): Promise<string> {
   const saltRounds = 10;
   const salt = await bcrypt.genSalt(saltRounds);
@@ -76,6 +75,9 @@ router.post('/login', async (req: Request, res: Response) => {
   }
 
   const jwt = generateJWT(user);
+
+  console.log(new Date().toLocaleString() + ": User " +user.email + " logged in");
+
   res.status(200).send({auth: true, token: jwt, user: user.short()});
 });
 
