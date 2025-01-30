@@ -6,6 +6,7 @@ The project is split into two parts:
 1. Frontend - Angular web application built with Ionic Framework
 2. Backend RESTful API - Node-Express application
 
+
 ## Getting Started
 > _tip_: it's recommended that you start with getting the backend API running since the frontend web application depends on the API.
 
@@ -84,3 +85,9 @@ Launch the frontend app locally.
     ```
 4. `set_env.sh` is really for your backend application. Frontend applications have a different notion of how to store configurations. Configurations for the application endpoints can be configured inside of the `environments/environment.*ts` files.
 5. In `set_env.sh`, environment variables are set with `export $VAR=value`. Setting it this way is not permanent; every time you open a new terminal, you will have to run `set_env.sh` to reconfigure your environment variables. To verify if your environment variable is set, you can check the variable with a command like `echo $POSTGRES_USERNAME`.
+
+
+   
+## Project Submission Remark: Using GitHub Actions instead of Travis CI
+As of now there seems to be no possibility to use Travis CI for free. The available usage plans start from 15$ per month.
+GitHub Actions also allow to build a CI/CD pipeline to automatically build and push Docker images to a Docker Repo based on a yaml configuration file. Therefore I decided to use GitHub Actions.
